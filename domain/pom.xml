@@ -9,12 +9,11 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>domain</artifactId>
+  <artifactId>photoalbums-domain</artifactId>
   <packaging>jar</packaging>
   <description>JPA entities, DAO layer, Domain objects</description>
 
   <build>
-    <finalName>photoalbums-ejb3-domain</finalName>
   </build>
 
 </project>

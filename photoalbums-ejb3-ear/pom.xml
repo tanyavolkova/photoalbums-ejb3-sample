@@ -15,14 +15,14 @@
   <dependencies>
     <dependency>
       <groupId>tanyavolkova.samples</groupId>
-      <artifactId>web</artifactId>
+      <artifactId>photoalbums</artifactId>
       <version>${project.version}</version>
       <type>war</type>
     </dependency>
 
     <dependency>
       <groupId>tanyavolkova.samples</groupId>
-      <artifactId>services</artifactId>
+      <artifactId>photoalbums-services</artifactId>
       <version>${project.version}</version>
       <type>ejb</type>
     </dependency>
@@ -40,13 +40,37 @@
           <modules>
             <webModule>
               <groupId>tanyavolkova.samples</groupId>
-              <artifactId>web</artifactId>
+              <artifactId>photoalbums</artifactId>
             </webModule>
             <ejbModule>
               <groupId>tanyavolkova.samples</groupId>
-              <artifactId>services</artifactId>
+              <artifactId>photoalbums-services</artifactId>
             </ejbModule>
           </modules>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.openejb.maven</groupId>
+        <artifactId>tomee-maven-plugin</artifactId>
+        <version>1.7.2</version>
+        <configuration>
+          <tomeeVersion>1.7.2</tomeeVersion>
+          <tomeeClassifier>plus</tomeeClassifier>
+          <!--<config>${project.basedir}/src/test/tomee/conf</config>-->
+          <debug>false</debug>
+          <debugPort>8000</debugPort>
+          <warFile>${project.build.directory}/${project.build.finalName}.${project.packaging}</warFile>
+          <!--<apps>
+            <app>${project.groupId}:${project.build.finalName}:${project.version}:${project.packaging}</app>
+          </apps>-->
+          <synchronization>
+            <!-- if you want to update each time you build with mvn compile -->
+            <extensions>
+              <extension>.class</extension>
+            </extensions>
+          </synchronization>
+          <reloadOnUpdate>true</reloadOnUpdate>
         </configuration>
       </plugin>
     </plugins>
