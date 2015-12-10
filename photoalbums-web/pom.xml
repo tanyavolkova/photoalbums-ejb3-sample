@@ -15,7 +15,7 @@
   <dependencies>
     <dependency>
       <groupId>tanyavolkova.samples</groupId>
-      <artifactId>photoalbums-services</artifactId>
+      <artifactId>photoalbums-business</artifactId>
       <version>${project.version}</version>
       <type>ejb</type>
     </dependency>
@@ -29,7 +29,7 @@
   </dependencies>
 
   <build>
-    <finalName>photoalbums-ebj3-sample</finalName>
+    <finalName>${parent.artifactId}</finalName>
 
     <plugins>
       <plugin>

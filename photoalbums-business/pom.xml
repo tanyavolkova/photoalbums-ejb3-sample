@@ -9,7 +9,7 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>photoalbums-services</artifactId>
+  <artifactId>photoalbums-business</artifactId>
   <packaging>ejb</packaging>
 
   <description>EJB services layer</description>
@@ -17,7 +17,7 @@
   <dependencies>
     <dependency>
       <groupId>tanyavolkova.samples</groupId>
-      <artifactId>photoalbums-domain</artifactId>
+      <artifactId>photoalbums-persistence</artifactId>
       <version>${project.version}</version>
     </dependency>
 

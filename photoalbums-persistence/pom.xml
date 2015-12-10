@@ -9,7 +9,7 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>photoalbums-domain</artifactId>
+  <artifactId>photoalbums-persistence</artifactId>
   <packaging>jar</packaging>
   <description>JPA entities, DAO layer, Domain objects</description>
 

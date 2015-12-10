@@ -10,10 +10,9 @@
   <version>1.0-SNAPSHOT</version>
 
   <modules>
-    <module>domain</module>
-    <module>photoalbums-ejb3-ear</module>
-    <module>services</module>
-    <module>web</module>
+    <module>photoalbums-business</module>
+    <module>photoalbums-persistence</module>
+    <module>photoalbums-web</module>
   </modules>
 
   <properties>
